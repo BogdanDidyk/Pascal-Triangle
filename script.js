@@ -1,5 +1,15 @@
-function printMatrix(matrix) {
-    matrix.forEach(row => console.log(row.join(" ")));
+function getArrayCharacterLength(arr) {
+    return arr.toString().length;
+}
+
+function printPascalTriangle(matrix) {
+    const baseWidth = getArrayCharacterLength(matrix[matrix.length - 1]);
+    
+    matrix.forEach(row => {
+        const len = baseWidth - getArrayCharacterLength(row);
+        const emptySpace = " ".repeat(len / 2);
+        console.log(`${emptySpace}${row.join(" ")}${emptySpace}`);
+    });
 }
 
 function getPascalTriangle(n) {
@@ -22,4 +32,4 @@ function getPascalTriangle(n) {
 }
 
 const pascalTriangle = getPascalTriangle(10);
-printMatrix(pascalTriangle);
+printPascalTriangle(pascalTriangle);
