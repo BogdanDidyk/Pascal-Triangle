@@ -1,4 +1,4 @@
-# Merge Two Sorted Arrays
+# Pascal Triangle
 This code implements a method for creating a Pascal triangle and displaying it in the console.
 
 ## Example
